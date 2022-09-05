@@ -1,0 +1,102 @@
+<html>
+<head>
+<title>Styled Menu Design</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<div   class="hero">
+	<h1>Customer Reviews</h1>
+	
+	
+	<div class="review-box">
+	
+	
+	
+		<div id="slide">
+		<div class="card">
+				<div class="profile">
+				<img src="pic1.jpg">
+				<div><h3>Riley Olie</h3>
+				<p>Web designer</p>
+				</div>
+				</div>
+				
+				<p>I am an Assistant Professor in School of Electrical Engineering and Computer Science (SEECS), National University of Sciences and technology (NUST), Pakistan since October 2020. I did my PhD from NUST-SEECS under the supervision
+				</p>
+		</div>
+		
+		
+		
+		<div class="card">
+				<div class="profile">
+				<img src="pic2.jpg">
+				<div><h3>Riley Olie</h3>
+				<p>Web designer</p>
+				</div>
+				</div>
+				
+				<p>I am an Assistant Professor in School of Electrical Engineering and Computer Science (SEECS), National University of Sciences and technology (NUST), Pakistan since October 2020. I did my PhD from NUST-SEECS under the supervision
+				</p>
+		</div>
+		
+		
+		<div class="card">
+				<div class="profile">
+				<img src="pic3.jpg">
+				<div><h3>Riley Olie</h3>
+				<p>Web designer</p>
+				</div>
+				</div>
+				
+				<p>I am an Assistant Professor in School of Electrical Engineering and Computer Science (SEECS), National University of Sciences and technology (NUST), Pakistan since October 2020. I did my PhD from NUST-SEECS under the supervision
+				</p>
+		</div>
+		
+		
+		<div class="card">
+				<div class="profile">
+				<img src="pic4.jpg">
+				<div><h3>Riley Olie</h3>
+				<p>Web designer</p>
+				</div>
+				</div>
+				
+				<p>I am an Assistant Professor in School of Electrical Engineering and Computer Science (SEECS), National University of Sciences and technology (NUST), Pakistan since October 2020. I did my PhD from NUST-SEECS under the supervision
+				</p>
+		</div>
+		</div>
+		<div class="sidebar">
+		<img src="up-arrow.png" id="upArrow">
+		<img src="down-arrow.png" id="downArrow">
+		</div>
+	
+		</div>
+		
+	</div>
+	
+	
+	</div>
+	
+	<script>
+	var slide=document.getElementById("slide");
+	
+	var upArrow=document.getElementById("upArrow");
+	var downArrow=document.getElementById("downArrow");
+	
+	let x=0;
+	upArrow.onclick=function(){
+	if(x>"-900"){
+	x=x-300;
+	slide.style.top=x+"px";
+	}}
+	
+	
+	downArrow.onclick=function(){
+	if(x<0){
+	x=x+300;
+	slide.style.top=x+"px";
+	}}
+	</script>
+</body>
+</html>
