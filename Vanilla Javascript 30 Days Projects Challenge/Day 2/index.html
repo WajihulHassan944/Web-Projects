@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 2</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h2>Updating CSS variables with <span class="highlight">JS</span></h2>
+<div class="elements">
+
+<div class="input">
+<label for="spacing">Spacing: </label>
+<input type="range" min="10" max="100" value="10" name="spacing" data-sizing="px">
+</div>
+
+<div class="input">
+<label for="blur">Blur: </label>
+<input type="range" min="0" max="25" value="10" name="blur" data-sizing="px">
+</div>
+
+<div class="input">
+<label for="baseColor">Base Color: </label>
+<input type="color" value="#f44336" name="baseColor" >
+</div>
+
+<div class="input">
+<label for="bgColor">Background: </label>
+<input type="color"  value="#999" name="bgColor" >
+</div>
+
+<div class="input">
+<label for="textColor">Text Color: </label>
+<input type="color" value="#fff" name="textColor" >
+</div>
+
+
+
+</div>
+<img src="img.jpg">
+
+
+
+<script>
+
+function handler(){
+ const suffix = this.dataset.sizing || '';
+ document.documentElement.style.setProperty(`--${this.name}`,this.value + suffix);
+}
+
+const inputs = document.querySelectorAll('.elements input');
+inputs.forEach(input => input.addEventListener("mousemove",handler));
+inputs.forEach(input => input.addEventListener("change",handler));
+
+
+
+
+</script>
+</body>
+</html>
