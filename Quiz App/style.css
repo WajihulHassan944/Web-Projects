@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Lobster&family=Ubuntu&display=swap');
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	font-family:"josefin sans",sans-serif;
+	font-weight:300;
+	
+}
+body{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	min-height:100vh;
+	width:100%;
+	flex-direction:column;
+	background:hsl(206 , 92% , 94%);
+}
+.container{
+	width:40vw;
+	background:#fff;
+	position:relative;
+}
+.question{
+	padding:20px;
+	font-size:37px;
+}
+ul li{
+	list-style:none;
+	margin:10px 20px;
+	font-size:20px;
+}
+#submit{
+	border:none;
+	outline:none;
+	padding:10px 30px;
+	color:#fff;
+	background:#74b9ff;
+	cursor:pointer;
+	display:block;
+	margin:20px auto;
+	
+}
+#submit:hover{
+	background:#0984e3;
+}
+.scorearea{
+	background:#dfe6e9;
+	width:30vw;
+	padding:10px 60px;
+	margin:20px auto;
+	display:none;
+}
+.playAgainBtn{
+	border:none;
+	outline:none;
+	padding:10px 40px;
+	color:#fff;
+	background:#55efc4;
+	cursor:pointer;
+	display:block;
+	margin:20px auto;
+}
+.playAgainBtn:hover{
+	background:#00b894;
+}
+.scorearea h3{
+	text-align:center;
+	margin-top:10px;
+	color:#fff;
+	font-weight:600;
+	font-size:30px;
+}
