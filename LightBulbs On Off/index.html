@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>Bulb On OFF</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<div   class="container">
+
+<figure>
+	<img src="off.png" id="bulb1">
+	<figcaption>
+		<p>Light ON OFF</p>
+	</figcaption>
+</figure>
+<figure>
+	<img src="off.png" id="bulb2">
+	<figcaption>
+		<p>Light ON OFF</p>
+	</figcaption>
+</figure>
+<figure>
+	<img src="off.png" id="bulb3">
+	<figcaption>
+		<p>Light ON OFF</p>
+	</figcaption>
+</figure>
+<figure>
+	<img src="off.png" id="bulb4">
+	<figcaption>
+		<p>Light ON OFF</p>
+	</figcaption>
+</figure>
+<figure>
+	<img src="off.png" id="bulb5">
+	<figcaption>
+		<p>Light ON OFF</p>
+	</figcaption>
+</figure>
+
+
+</div>
+<button id="btn" onclick="hello()">Click Here to ON/OFF Bulbs</button>
+
+
+<script>
+
+function hello(){
+
+for(let x=1;x<6;x++){
+const bulbId=document.getElementById("bulb".concat(x));
+
+	if(bulbId.src.match('off')){
+	bulbId.src="on.png";
+	btn.innerText="Bulbs are On";
+	}else{
+	bulbId.src="off.png";
+	btn.innerText="Bulbs are Off";
+	}
+  }
+}
+
+
+
+
+</script>
+</body>
+</html>
