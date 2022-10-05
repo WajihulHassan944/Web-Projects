@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900|Open+Sans:300,400|Oswald:400,700');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    padding: 30px;
+    background: #eaeaea;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	min-height:100vh;
+	flex-direction:column;
+}
+
+h2 {
+    margin-bottom: 30px;
+}
+
+.clock-box {
+    width: 300px;
+}
+
+.clock-box h4 {
+    background: #e11837;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 12px 10px;
+    font-size: 14px;
+}
+
+.clockElements {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none
+}
+
+.clock-box li {
+    width: 33%;
+    background: green;
+    color: #fff;
+    background: #d31734;
+    text-align: center;
+}
+
+.clock-box li p {
+    font-size: 56px;
+}
+
+.clock-box li span {
+    background: #bc0d27;
+    display: block;
+    padding: 5px
+}

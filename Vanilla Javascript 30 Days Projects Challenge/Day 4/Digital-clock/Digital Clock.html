@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Day # 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h2>Digital Clock</h2>
+
+    <div class="clock-box">
+        <h4>
+            <span id="Day">--</span>
+            <span>/</span>
+            <span id="ampm">--</span>
+        </h4>
+        <ul class="clockElements">
+            <li>
+                <p id="hours">--</p>
+                <span>Hours</span>
+            </li>
+            <li>
+                <p id="Minutes">--</p>
+                <span>Minutes</span>
+            </li>
+            <li>
+                <p id="Seconds">--</p>
+                <span>Seconds</span>
+            </li>
+        </ul>
+
+    </div>
+
+    <script>
+        setInterval(showTime, 1000)
+
+        function showTime() {
+            var time = new Date();
+            
+            var days = ["Sunday", "Monday", "Tuesday",
+                "Wednesday", "Thursday", "Friday", "Saturday"
+            ];
+            var Hrs = time.getHours()
+            var Min = time.getMinutes()
+            var Sec = time.getSeconds()
+            var am = "AM"
+
+            if (Hrs > 12) {
+                Hrs = Hrs - 12;
+                var am = "PM"
+            }
+            else
+            {
+              var am = "AM"  
+            }
+            Hrs = (Hrs < 10) ? "0" + Hrs : Hrs
+            Min = (Min < 10) ? "0" + Min : Min
+            Sec = (Sec < 10) ? "0" + Sec : Sec
+
+            document.getElementById("Day").innerHTML = days[time.getDay()];
+            document.getElementById("hours").innerHTML = Hrs
+            document.getElementById("Minutes").innerHTML = Min
+            document.getElementById("Seconds").innerHTML = Sec;
+            document.getElementById("ampm").innerHTML = am;
+
+        }
+showTime();
+    </script>
+</body>
+
+</html>
