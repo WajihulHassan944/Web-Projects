@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<h1>Age calculator</h1>
+<div class="line"></div>
+<div class="inputs">
+
+<div class="input-group">
+<label for="date">Date</label>
+<input type="text" id="date" placeholder="dd">
+</div>
+
+<div class="input-group">
+<label for="month">Month</label>
+<input type="text" id="month" placeholder="mm">
+</div>
+
+<div class="input-group">
+<label for="year">Year</label>
+<input type="text" id="year" placeholder="yyyy"></div>
+</div>
+
+<center><button onclick="age()">Calculate</button></center>
+<h2 id="age"></h2>
+
+</div>
+<script>
+
+function age(){
+var d1=document.getElementById("date").value;
+var m1=document.getElementById("month").value;
+var y1=document.getElementById("year").value;
+
+var date=new Date();
+var d2=date.getDate();
+var m2=1+date.getMonth();
+var y2=date.getFullYear();
+
+
+var d=d2-d1;
+var m=m2-m1;
+var y=y2-y1;
+if(d1=="" || m1=="" || y1==""){
+	document.getElementById("age").innerHTML="Please completely enter your date";
+}
+else if(d<0){
+document.getElementById("age").innerHTML="Please Enter a valid Birth date";
+}else{
+document.getElementById("age").innerHTML="Your age is "+y+" years, "+m+" months, "+d+" days.";
+}
+
+}
+
+
+
+
+</script>
+
+</body>
+</html>
